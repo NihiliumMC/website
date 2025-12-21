@@ -1,4 +1,7 @@
-const links = [{ name: "about", link: "about.html" }];
+const links = [
+  { name: "about us", link: "about.html" },
+  { name: "gallery", link: "gallery.html" },
+];
 
 const topbarDiv = document.createElement("div");
 topbarDiv.classList.add("topbar");
@@ -13,8 +16,13 @@ topbarDiv.appendChild(homeLink);
 
 for (const linkObj of links) {
   const linkElement = document.createElement("a");
+
+  linkElement.classList.add("smallcaps");
+  linkElement.style.fontSize = "x-large";
+
   linkElement.href = linkObj.link;
-  linkElement.innerText = linkObj.name.toUpperCase();
+  linkElement.innerText = linkObj.name;
+
   topbarDiv.appendChild(linkElement);
 }
 

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <title>ɴɪʜɪʟɪᴜᴍ.ᴏʀɢ</title>
+    <style>
+      .main-grid {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .imageContainer {
+        display: flex;
+
+        width: 10em;
+        height: fit-content;
+        padding: 0.2em;
+
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .image {
+        display: block;
+        width: 100%;
+      }
+
+      a {
+        color: gray;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main" id="main">
+      <div class="main-grid" id="main-grid"></div>
+    </div>
+  </body>
+  <script src="topbar.js"></script>
+  <script src="makeCopyButton.js"></script>
+  <script>
+    const images = [
+      {
+        path: "assets/maparts/ryk_cool.png",
+        description: "Mapart made by ryk_cool",
+      },
+      {
+        path: "assets/maparts/border_1.webp",
+        description: `When 456226577798135808 (Deleted User) on discord reached the world border. Announced ${new Date(
+          1740511085413
+        ).toDateString()}`,
+      },
+      {
+        path: "assets/maparts/border_2.webp",
+        description: `When 'fjas' on discord reached the +x world border. Message was sent ${new Date(
+          1745849217574
+        ).toDateString()}`,
+      },
+      {
+        path: "assets/maparts/spawn_1.png",
+        description: "",
+      },
+      {
+        path: "assets/maparts/spawn_2.png",
+        description: "",
+      },
+      {
+        path: "assets/maparts/spawn_3.png",
+        description: "",
+      },
+      {
+        path: "assets/maparts/spawn_4.png",
+        description: "",
+      },
+      {
+        path: "assets/maparts/spawn_5.png",
+        description: "",
+      },
+    ];
+    const imageContainer = document.getElementById("main-grid");
+
+    if (imageContainer) {
+      for (const image of images) {
+        const imageLink = document.createElement("a");
+
+        imageLink.classList.add("imageContainer");
+        imageLink.href = image.path;
+
+        const imageElement = document.createElement("img");
+        imageElement.classList.add("image");
+        imageElement.src = image.path;
+
+        imageLink.append(imageElement);
+        imageLink.target = "_blank";
+        imageLink.innerHTML += image.description;
+
+        imageContainer.append(imageLink);
+      }
+    } else {
+      console.error("Image container not found");
+    }
+  </script>
+</html>
