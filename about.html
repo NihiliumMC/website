@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <title>ɴɪʜɪʟɪᴜᴍ.ᴏʀɢ</title>
+    <style>
+      a {
+        color: rgb(186, 186, 186);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main" id="main">
+      Minecraft anarchy server with truly no limits. The server has been running
+      mostly continuosly since <span id="since"></span> with varying
+      playercount. The world is about 500GB in size and the world border was
+      reached for the first time <span id="border"></span>. The server is owned by Hausemasteer and maintained by <a target="_blank" href="https://beveledcube.vercel.app/">BeveledCube</a>
+    </div>
+  </body>
+  <script src="topbar.js"></script>
+  <script>
+    replace("since", new Date(1736445237596).toDateString());
+    replace("border", new Date(1740511085413).toDateString());
+
+    function replace(id, text) {
+      const since = document.getElementById(id);
+      if (since) since.innerText = text;
+      else console.error(`Span for ${id} not found`);
+    }
+  </script>
+</html>

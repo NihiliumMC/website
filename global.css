@@ -1,0 +1,55 @@
+body {
+  background-color: rgb(55, 55, 55);
+  color: rgb(205, 205, 205);
+  font-family: sans-serif;
+  font-size: large;
+
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main {
+  width: 80vw;
+}
+
+.smallcaps {
+  font-variant: small-caps;
+}
+
+.topbar {
+  display: flex;
+  width: 100%;
+
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+}
+
+.topbar img {
+  margin: 5px;
+  border-radius: 5px;
+  padding: 2px;
+  width: 2em;
+}
+
+.topbar a {
+  height: fit-content;
+  color: white;
+  text-decoration: none;
+}
+
+.topbar a:hover {
+  text-decoration: underline;
+}
