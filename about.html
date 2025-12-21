@@ -9,15 +9,54 @@
       a {
         color: rgb(186, 186, 186);
       }
+
+      h1,
+      h2 {
+        margin: 10px;
+      }
+
+      .contactContainer {
+        display: flex;
+        color: white;
+        gap: 20px;
+      }
+
+      .contactElement {
+        text-align: center;
+        vertical-align: top;
+      }
     </style>
   </head>
 
   <body>
     <div class="main" id="main">
+      <h1>About <span class="smallcaps">nihilium</span></h1>
+
       Minecraft anarchy server with truly no limits. The server has been running
-      mostly continuosly since <span id="since"></span> with varying
+      mostly continuously since <span id="since"></span> with varying
       playercount. The world is about 500GB in size and the world border was
-      reached for the first time <span id="border"></span>. The server is owned by Hausemasteer and maintained by <a target="_blank" href="https://beveledcube.vercel.app/">BeveledCube</a>
+      reached for the first time <span id="border"></span>. The server is owned
+      by Hausemasteer and developed by
+      <a target="_blank" href="https://beveledcube.vercel.app/">BeveledCube</a>.
+
+      <h1>Contact us</h1>
+      <div class="contactContainer">
+        <div class="contactElement">
+          <h2>Discord</h2>
+          <span class="code">hausemasteer</span><br>
+          <span class="code">beveledcube</span>
+        </div>
+        <div class="contactElement">
+          <h2>Mail</h2>
+          <a href="mailto:nihiliumanarchy@gmail.com"
+            >nihiliumanarchy@gmail.com</a
+          >
+        </div>
+        <div class="contactElement">
+          <a href="https://stoat.chat/"><h2 class="smallcaps">stoat</h2></a>
+          beveledcube#0622
+        </div>
+      </div>
     </div>
   </body>
   <script src="topbar.js"></script>

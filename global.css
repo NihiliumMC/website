@@ -12,6 +12,11 @@ body {
   padding: 0;
 }
 
+h1,
+h2 {
+  color: white;
+}
+
 strong {
   color: white;
 }
@@ -28,6 +33,14 @@ button {
   font-variant: small-caps;
 }
 
+.code {
+  font-family: monospace;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 0.1em;
+}
+
 .topbar {
   display: flex;
   width: 100%;
@@ -41,7 +54,7 @@ button {
   margin: 5px;
   border-radius: 5px;
   padding: 2px;
-  width: 2em;
+  width: 3em;
 }
 
 .topbar a {

@@ -10,21 +10,19 @@
         display: flex;
         flex-direction: row;
         height: 100%;
+        gap: 5px;
 
         justify-content: center;
         align-items: center;
       }
 
-      .highlight {
-        background-color: black;
-        color: white;
-        border-radius: 5px;
-        padding: 0.2em;
-      }
-
       .discord {
-        color: #5865f2;
+        color: white;
+        background-color: #5865f2;
+        border-radius: 10px;
         font-size: larger;
+        padding: 18px;
+        margin: 5px;
       }
 
       .sidebar {
@@ -37,7 +35,6 @@
       }
 
       .imageContainer {
-        padding: 10px;
         display: flex;
 
         width: fit-content;
@@ -53,14 +50,14 @@
         max-width: 90%;
       }
 
-      .ips .java strong,
-      .ips .bedrock strong {
+      .sidebar .java strong,
+      .sidebar .bedrock strong {
         display: block;
         text-align: center;
       }
 
-      .ips .java,
-      .ips .bedrock {
+      .sidebar .java,
+      .sidebar .bedrock {
         margin: 10px;
       }
 
@@ -83,27 +80,24 @@
     <div class="main" id="main">
       <div class="main-flex" id="main-flex">
         <div class="sidebar">
-          The true anarchy survival experience
+          The true survival anarchy experience
           <div class="java">
             <strong>JAVA</strong>
-            <span class="smallcaps">(1.9.x - 1.21.x)</span><br />
-            <span class="highlight">nihilium.org</span>
+            <span class="code">nihilium.org</span>
             <button class="java-btn" id="java-btn">COPY</button>
+            <br />
+            <span class="smallcaps">(1.9.x - 1.21.x)</span>
           </div>
 
           <div class="bedrock">
             <strong>BEDROCK</strong>
-            <span class="highlight">bedrock.nihilium.org</span>
+            <span class="code">bedrock.nihilium.org</span>
             <button class="bedrock-btn" id="bedrock-btn">COPY</button>
             <br />
             <span class="smallcaps">port</span>
-            <span class="highlight">19132</span>
+            <span class="code">19132</span>
           </div>
-          <p>
-            <a href="https://dsc.gg/nihilium" class="discord"
-              >Join the Discord</a
-            >
-          </p>
+          <a href="https://dsc.gg/nihilium" class="discord" target="_blank">Join the Discord</a>
         </div>
       </div>
     </div>
@@ -159,6 +153,7 @@
       imageElement.src = image.path;
 
       imageLink.append(imageElement);
+      imageLink.target = "_blank";
       imageLink.innerHTML += image.description;
 
       imageContainer.append(imageLink);
