@@ -7,7 +7,7 @@ const topbarDiv = document.createElement("div");
 topbarDiv.classList.add("topbar");
 
 const homeImg = document.createElement("img");
-homeImg.src = "favicon.ico";
+homeImg.src = "https://nihiliummc.github.io/website/assets/favicon.ico";
 
 const homeLink = document.createElement("a");
 homeLink.href = "index.html";
