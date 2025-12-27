@@ -97,7 +97,7 @@
             <span class="smallcaps">port</span>
             <span class="code">19132</span>
           </div>
-          <div id="playercount" style="font-size: larger"></div>
+          <img src="https://api.mcstatus.io/v2/widget/java/nihilium.org" style="height: 5.5em;"></img>
           <a href="https://dsc.gg/nihilium" class="discord" target="_blank"
             >Join the Discord</a
           >
@@ -158,19 +158,6 @@
       imageContainer.append(imageLink);
     } else {
       console.error("Image container not found");
-    }
-
-    getPlayercount();
-    async function getPlayercount() {
-      const res = await fetch(
-        "https://api.mcstatus.io/v2/status/java/nihilium.org"
-      );
-      const status = await res.json()
-
-      if(res.ok && status.online) {
-        const playercountElement = document.getElementById("playercount")
-        playercountElement.innerText=`${status.players.online} players online`
-      }
     }
   </script>
 </html>
