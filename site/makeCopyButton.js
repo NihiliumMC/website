@@ -1,4 +1,4 @@
-function makeCopyButton(elementID, textToCopy, defaultText, copiedText) {
+function makeCopyButton(elementID, textToCopy, defaultContent, copiedContent) {
   const btn = document.getElementById(elementID);
 
   if (!btn) {
@@ -6,14 +6,14 @@ function makeCopyButton(elementID, textToCopy, defaultText, copiedText) {
     return;
   }
 
-  btn.textContent = defaultText;
+  btn.innerHTML = defaultContent;
 
   btn.addEventListener("click", function () {
     navigator.clipboard.writeText(textToCopy).then(function () {
-      btn.textContent = copiedText;
+      btn.innerHTML = copiedContent;
 
       setTimeout(() => {
-        btn.textContent = defaultText;
+        btn.innerHTML = defaultContent;
       }, 2000);
     });
   });

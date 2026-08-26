@@ -1,6 +1,13 @@
+:root {
+  --primary-color: #ff9a00;
+  --secondary-color: #44a1a4;
+  --tertiary-color: #325e6a;
+  --background-color: #224248;
+}
+
 body {
-  background-color: rgb(55, 55, 55);
-  color: rgb(205, 205, 205);
+  background-color: var(--background-color);
+  color: var(--secondary-color);
   font-family: sans-serif;
   font-size: large;
 
@@ -12,9 +19,12 @@ body {
   padding: 0;
 }
 
-h1,
+h1 {
+  color: var(--primary-color);
+}
+
 h2 {
-  color: white;
+  color: var(--secondary-color);
 }
 
 strong {
@@ -31,26 +41,51 @@ button {
   max-width: 80vw;
 }
 
-.smallcaps {
-  font-variant: small-caps;
+.section {
+  background-color: var(--background-color);
+  padding: 1em;
+
+  outline-style: solid;
+  outline-color: var(--tertiary-color);
+  outline-width: 2px;
 }
 
-.code {
-  font-family: monospace;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  padding: 0.1em;
+.section h1 {
+  font-variant: small-caps;
+  font-size: larger;
+
+  text-align: left;
+  margin: 0;
+  margin-top: 0.3em;
+}
+
+.section h2 {
+  font-variant: small-caps;
+  font-size: large;
+
+  text-align: left;
+  margin: 0;
+  margin-top: 0.3em;
 }
 
 .topbar {
   display: flex;
   width: 100%;
-  gap: 1em;
+  height: 4em;
 
-  margin: 1em;
+  gap: 2px;
+  margin: 0.5em;
+  box-sizing: border-box;
 
   vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+}
+
+/* All children */
+.topbar > * {
+  display: flex;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -58,12 +93,12 @@ button {
 .topbar img {
   border-radius: 5px;
   padding: 2px;
-  width: 3em;
+  height: 3em;
 }
 
 .topbar a {
   height: fit-content;
-  color: white;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -72,7 +107,14 @@ button {
 }
 
 .footer {
-  color: gray;
+  color: var(--tertiary-color);
+  background-color: var(--background-color);
+
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 1;
 
   text-align: center;
   padding: 0.5em;
@@ -82,5 +124,23 @@ button {
 }
 
 .footer a {
-  color: gray;
+  color: #356c7c;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #356c7c;
+  text-decoration: underline;
+}
+
+.code {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 1;
+
+  background-color: black;
+  color: var(--secondary-color);
+  padding: 0.2em;
 }

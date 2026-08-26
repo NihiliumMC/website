@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://nihiliummc.github.io/website/assets/favicon.ico"
+    />
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <title>About - nihilium.org</title>
+    <style>
+      a {
+        color: rgb(186, 186, 186);
+      }
+
+      h1,
+      h2 {
+        margin: 10px;
+      }
+
+      .contactContainer {
+        display: flex;
+        color: white;
+        gap: 20px;
+      }
+
+      .contactElement {
+        text-align: center;
+        vertical-align: top;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main" id="main">
+      <h1>About <span class="smallcaps">nihilium</span></h1>
+
+      Minecraft anarchy server with truly no limits. The server has been running
+      mostly continuously since <span id="since-time">pls enable JS</span> with
+      varying playercount. The world is about 500GB in size and the world border
+      was reached for the first time
+      <span id="border-time">pls enable JS</span>. The server is owned by
+      Hausemasteer and developed by
+      <a target="_blank" href="https://beveledcube.vercel.app/">BeveledCube</a>.
+
+      <h1>Contact us</h1>
+      <div class="contactContainer">
+        <div class="contactElement">
+          <h2>Discord</h2>
+          <span class="code">beveledcube</span>
+        </div>
+
+        <div class="contactElement">
+          <h2>Mail</h2>
+          <a href="mailto:nihiliumanarchy@gmail.com"
+            >nihiliumanarchy@gmail.com</a
+          >
+        </div>
+
+        <div class="contactElement">
+          <a href="https://stoat.chat/"><h2 class="smallcaps">stoat</h2></a>
+          <span class="code">beveledcube#0622</span>
+          <span class="code">Hausemasteer#1393</span>
+        </div>
+
+        <div class="contactElement">
+          <a href="https://signal.org/"><h2 class="smallcaps">signal</h2></a>
+          <span class="code">BeveledCube.01</span>
+          <span class="code">hausemasteer.81</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="footer.js"></script>
+  <script>
+    replace("since-time", new Date(1736445237596).toDateString());
+    replace("border-time", new Date(1740511085413).toDateString());
+
+    function replace(id, text) {
+      const since = document.getElementById(id);
+      if (since) since.innerText = text;
+      else console.error(`Span for ${id} not found`);
+    }
+  </script>
+</html>
