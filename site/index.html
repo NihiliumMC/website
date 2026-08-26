@@ -3,6 +3,7 @@
   <head>
     <meta name="msvalidate.01" content="15101D090DBCE5AF4AE2DDD0253D3135" />
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,6 +40,7 @@
     <meta property="og:url" content="https://nihilium.org/" />
     <meta property="og:type" content="website" />
 
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/x-icon"
@@ -47,17 +49,6 @@
     <link rel="stylesheet" type="text/css" href="global.css" />
     <title>Nihilium</title>
     <style>
-      .main-flex {
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        gap: 1em;
-
-        margin: 1em;
-        justify-content: center;
-        align-items: center;
-      }
-
       /* Styles for image from gallery */
       .imageContainer {
         display: flex;
@@ -87,27 +78,6 @@
         display: flex;
         width: fit-content;
         flex-direction: column;
-      }
-
-      .sidebar .section .title {
-        text-align: center;
-
-        font-family: "Lato", sans-serif;
-        font-size: 3em;
-        font-weight: 999;
-        font-style: italic;
-        font-family: Arial, Helvetica, sans-serif;
-
-        background: linear-gradient(0deg, #191919, #c0c0c0, #191919);
-        background-clip: text;
-        -webkit-background-clip: text; /* for Safari/older browsers */
-        color: transparent;
-        -webkit-text-fill-color: transparent; /* for Safari */
-      }
-
-      .sidebar .section .subtitle {
-        text-align: center;
-        font-weight: 700;
       }
 
       .sidebar .section .nav {
@@ -166,54 +136,52 @@
 
   <body>
     <div class="main" id="main">
-      <div class="main-flex" id="main-flex">
-        <div class="sidebar">
-          <div class="section">
-            <div class="title">NIHILIUM</div>
-            <div class="nav">
-              <a href="about.html">about us</a>
-              <a href="gallery.html">gallery</a>
-            </div>
-            <div class="subtitle">The true survival anarchy experience</div>
+      <div class="sidebar">
+        <div class="section">
+          <div class="main-title">NIHILIUM</div>
+          <div class="nav">
+            <a href="about.html">about us</a>
+            <a href="gallery.html">gallery</a>
           </div>
-          <div class="section">
-            <h1>connect</h1>
-            <h2>Java</h2>
-            <span class="code">nihilium.org</span>
-            <button class="java-btn" id="java-btn">COPY</button>
-            (1.9.x - 26.x)
+          <div class="main-subtitle">The true survival anarchy experience</div>
+        </div>
+        <div class="section">
+          <h1>connect</h1>
+          <h2>Java</h2>
+          <span class="code">nihilium.org</span>
+          <button class="java-btn" id="java-btn">COPY</button>
+          (1.9.x - 26.x)
 
-            <h2>Bedrock</h2>
-            <span class="code">bedrock.nihilium.org</span>
-            <button class="bedrock-btn" id="bedrock-btn">COPY</button>
-            <br />
-            <span class="smallcaps">port</span>
-            <span class="code">25406</span>
-          </div>
+          <h2>Bedrock</h2>
+          <span class="code">bedrock.nihilium.org</span>
+          <button class="bedrock-btn" id="bedrock-btn">COPY</button>
+          <br />
+          <span class="smallcaps">port</span>
+          <span class="code">25406</span>
+        </div>
 
-          <div class="section community">
-            <h1>join the community</h1>
-            <div class="links">
-              <a href="https://stt.gg/aevDzk2v">
-                <img
-                  class="link-icon"
-                  src="https://nihiliummc.github.io/website/assets/stoat-toast.svg"
-                />
-              </a>
-              <a href="https://dsc.gg/nihilium">
-                <img
-                  class="link-icon"
-                  src="https://nihiliummc.github.io/website/assets/discord-clyde.svg"
-                />
-              </a>
-            </div>
+        <div class="section community">
+          <h1>join the community</h1>
+          <div class="links">
+            <a href="https://stt.gg/aevDzk2v">
+              <img
+                class="link-icon"
+                src="https://nihiliummc.github.io/website/assets/stoat-toast.svg"
+              />
+            </a>
+            <a href="https://dsc.gg/nihilium">
+              <img
+                class="link-icon"
+                src="https://nihiliummc.github.io/website/assets/discord-clyde.svg"
+              />
+            </a>
           </div>
-          <div class="section">
-            <img
-              src="https://api.mcstatus.io/v2/widget/java/nihilium.org"
-              style="height: 5.5em"
-            />
-          </div>
+        </div>
+        <div class="section">
+          <img
+            src="https://api.mcstatus.io/v2/widget/java/nihilium.org"
+            style="height: 5.5em"
+          />
         </div>
       </div>
     </div>
@@ -239,7 +207,7 @@
       return Math.floor(Math.random() * (y - x + 1)) + x;
     }
 
-    const imageContainer = document.getElementById("main-flex");
+    const imageContainer = document.getElementById("main");
     const image = galleryImages[random(0, galleryImages.length - 1)];
 
     console.log(`Selected ${JSON.stringify(image)}`);

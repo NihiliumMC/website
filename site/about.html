@@ -1,74 +1,113 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/x-icon"
       href="https://nihiliummc.github.io/website/assets/favicon.ico"
     />
     <link rel="stylesheet" type="text/css" href="global.css" />
-    <title>About - nihilium.org</title>
+    <title>About nihilium</title>
     <style>
-      a {
-        color: rgb(186, 186, 186);
-      }
-
-      h1,
-      h2 {
-        margin: 10px;
-      }
-
-      .contactContainer {
+      .main {
         display: flex;
-        color: white;
-        gap: 20px;
+        gap: 0.5em;
       }
 
-      .contactElement {
-        text-align: center;
-        vertical-align: top;
+      .centered-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+
+        gap: 0;
+        width: fit-content;
+        max-width: 50%;
+      }
+
+      .contacts {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        flex-wrap: wrap;
+      }
+
+      .contacts div {
+        background-color: var(--tertiary-color);
+        padding: 0.5em;
+      }
+
+      a {
+        color: var(--secondary-color);
       }
     </style>
   </head>
 
   <body>
     <div class="main" id="main">
-      <h1>About <span class="smallcaps">nihilium</span></h1>
-
-      Minecraft anarchy server with truly no limits. The server has been running
-      mostly continuously since <span id="since-time">pls enable JS</span> with
-      varying playercount. The world is about 500GB in size and the world border
-      was reached for the first time
-      <span id="border-time">pls enable JS</span>. The server is owned by
-      Hausemasteer and developed by
-      <a target="_blank" href="https://beveledcube.vercel.app/">BeveledCube</a>.
-
-      <h1>Contact us</h1>
-      <div class="contactContainer">
-        <div class="contactElement">
-          <h2>Discord</h2>
-          <span class="code">beveledcube</span>
+      <div class="sidebar">
+        <div class="section centered-section">
+          <a class="main-title" href="index.html">NIHILIUM</a>
+          <div class="main-subtitle">What is this</div>
         </div>
-
-        <div class="contactElement">
-          <h2>Mail</h2>
-          <a href="mailto:nihiliumanarchy@gmail.com"
-            >nihiliumanarchy@gmail.com</a
-          >
+        <div class="section">
+          Nihilium is a Minecraft anarchy server with truly no limits. The
+          server has been running mostly continuously since
+          <span id="since-time">pls enable JS</span> with varying playercount.
+          The world is about 500GB in size and the world border was reached for
+          the first time <span id="border-time">pls enable JS</span>. The server
+          is owned by Hausemasteer and developed by
+          <a target="_blank" href="https://beveledcube.vercel.app/"
+            >BeveledCube</a
+          >.
         </div>
+        <div class="section">
+          <div class="section">
+            <h1>Contact us</h1>
+            <div class="contacts">
+              <div>
+                <h2>Discord</h2>
+                <span class="code">beveledcube</span>
+                <h2>Mail</h2>
+                <a href="mailto:nihiliumanarchy@gmail.com"
+                  >nihiliumanarchy@gmail.com</a
+                >
+              </div>
 
-        <div class="contactElement">
-          <a href="https://stoat.chat/"><h2 class="smallcaps">stoat</h2></a>
-          <span class="code">beveledcube#0622</span>
-          <span class="code">Hausemasteer#1393</span>
-        </div>
+              <div>
+                <a href="https://stoat.chat/"
+                  ><h2 class="smallcaps">stoat</h2></a
+                >
+                <span class="code">beveledcube#0622</span>
+                <span class="code">Hausemasteer#1393</span>
+              </div>
 
-        <div class="contactElement">
-          <a href="https://signal.org/"><h2 class="smallcaps">signal</h2></a>
-          <span class="code">BeveledCube.01</span>
-          <span class="code">hausemasteer.81</span>
+              <div>
+                <a href="https://signal.org/"
+                  ><h2 class="smallcaps">signal</h2></a
+                >
+                <span class="code">BeveledCube.01</span>
+                <span class="code">hausemasteer.81</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
