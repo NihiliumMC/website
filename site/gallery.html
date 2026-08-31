@@ -11,17 +11,28 @@
     <link rel="stylesheet" type="text/css" href="global.css" />
     <title>Gallery - nihilium.org</title>
     <style>
-      .main-grid {
+      .main {
+        flex-direction: column !important;
+        align-items: stretch;
+      }
+
+      .topbar {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+        gap: 2px;
       }
 
       .imageContainer {
         display: flex;
 
-        width: 15em;
-        height: fit-content;
-        padding: 0.2em;
+        color: var(--secondary-color);
+        text-decoration: none !important;
 
         justify-content: center;
         align-items: center;
@@ -32,76 +43,38 @@
         display: block;
         width: 100%;
       }
-
-      a {
-        color: gray;
-        text-decoration: none;
-      }
     </style>
   </head>
 
   <body>
     <div class="main" id="main">
-      <div class="main-grid" id="main-grid"></div>
+      <div class="topbar">
+        <div class="section centered-section">
+          <a class="main-title" href="index.html">NIHILIUM</a>
+          <div class="main-subtitle">Images from the server</div>
+        </div>
+      </div>
+      <div class="gallery" id="gallery"></div>
     </div>
   </body>
   <script src="footer.js"></script>
   <script src="makeCopyButton.js"></script>
+  <script src="galleryImages.js"></script>
   <script>
-    const images = [
-      {
-        path: "https://nihiliummc.github.io/website/assets/gallery/ryk_cool.png",
-        description: "Mapart made by ryk_cool",
-      },
-      {
-        path: "https://nihiliummc.github.io/website/assets/gallery/border_1.webp",
-        description: `When 456226577798135808 (Deleted User) on discord reached the world border. Announced ${new Date(
-          1740511085413,
-        ).toDateString()}`,
-      },
-      {
-        path: "https://nihiliummc.github.io/website/assets/gallery/border_2.webp",
-        description: `When 'fjas' on discord reached the +x world border. Message was sent ${new Date(
-          1745849217574,
-        ).toDateString()}`,
-      },
-      {
-        path: "https://nihiliummc.github.io/website/assets/gallery/jesus_jenga_dragon.webp",
-        description: `A jesus statue built by jenga_dragon on discord`,
-      },
-      {
-        path: "https://nihiliummc.github.io/website/assets/gallery/spawn_1.png",
-        description: "",
-      },
-      {
-        path: "https://nihiliummc.github.io/website/assets/gallery/spawn_2.png",
-        description: "",
-      },
-      {
-        path: "https://nihiliummc.github.io/website/assets/gallery/spawn_3.png",
-        description: "",
-      },
-      {
-        path: "https://nihiliummc.github.io/website/assets/gallery/spawn_4.png",
-        description: "",
-      },
-      {
-        path: "https://nihiliummc.github.io/website/assets/gallery/spawn_5.png",
-        description: "",
-      },
-    ];
-    const imageContainer = document.getElementById("main-grid");
+    const imageContainer = document.getElementById("gallery");
 
     if (imageContainer) {
-      for (const image of images) {
+      for (const image of galleryImages) {
         const imageLink = document.createElement("a");
 
+        imageLink.classList.add("section");
         imageLink.classList.add("imageContainer");
         imageLink.href = image.path;
 
         const imageElement = document.createElement("img");
         imageElement.classList.add("image");
         imageElement.src = image.path;
+        imageElement.alt = image.description;
 
         imageLink.append(imageElement);
         imageLink.target = "_blank";

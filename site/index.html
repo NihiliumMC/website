@@ -49,6 +49,10 @@
     <link rel="stylesheet" type="text/css" href="global.css" />
     <title>Nihilium</title>
     <style>
+      .main {
+        flex-direction: row;
+      }
+
       /* Styles for image from gallery */
       .imageContainer {
         display: flex;
@@ -215,6 +219,7 @@
     if (imageContainer) {
       const imageLink = document.createElement("a");
 
+      imageLink.classList.add("section");
       imageLink.classList.add("imageContainer");
       imageLink.href = image.path;
 

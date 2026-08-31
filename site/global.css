@@ -1,3 +1,5 @@
+/* next up ? https://colorhunt.co/palette/524646a8a492fcf2e5ec5b38 */
+/* https://colorhunt.co/palette/224248325e6a44a1a4ff9a00 */
 :root {
   --primary-color: #ff9a00;
   --secondary-color: #44a1a4;
@@ -19,15 +21,15 @@ body {
   padding: 0;
 }
 
-.main {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  gap: 1em;
+a {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
-  margin: 1em;
-  justify-content: center;
-  align-items: center;
+a:hover {
+  color: color-mix(in srgb, var(--secondary-color) 80%, white);
+  text-decoration: underline;
 }
 
 h1 {
@@ -46,6 +48,16 @@ button {
   cursor: pointer;
 }
 
+.main {
+  display: flex;
+  height: 100%;
+  gap: 2px;
+
+  margin: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-title {
   text-align: center;
 
@@ -54,7 +66,7 @@ button {
   font-weight: 999;
   font-style: italic;
   font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
+  text-decoration: none !important;
 
   background: linear-gradient(0deg, #191919, #c0c0c0, #191919);
   background-clip: text;
@@ -66,6 +78,13 @@ button {
 .main-subtitle {
   text-align: center;
   font-weight: 700;
+}
+
+.centered-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .section {
@@ -83,7 +102,7 @@ button {
 
   text-align: left;
   margin: 0;
-  margin-top: 0.3em;
+  margin-bottom: 0.3em;
 }
 
 .section h2 {
@@ -92,44 +111,6 @@ button {
 
   text-align: left;
   margin: 0;
-}
-
-.topbar {
-  display: flex;
-  width: 100%;
-  height: 4em;
-
-  gap: 2px;
-  margin: 0.5em;
-  box-sizing: border-box;
-
-  vertical-align: middle;
-  justify-content: center;
-  align-items: center;
-}
-
-/* All children */
-.topbar > * {
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.topbar img {
-  border-radius: 5px;
-  padding: 2px;
-  height: 3em;
-}
-
-.topbar a {
-  height: fit-content;
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-.topbar a:hover {
-  text-decoration: underline;
 }
 
 .footer {
@@ -150,13 +131,11 @@ button {
 }
 
 .footer a {
-  color: #356c7c;
-  text-decoration: none;
+  color: var(--tertiary-color);
 }
 
 .footer a:hover {
-  color: #356c7c;
-  text-decoration: underline;
+  color: color-mix(in srgb, var(--tertiary-color) 80%, white);
 }
 
 .code {
