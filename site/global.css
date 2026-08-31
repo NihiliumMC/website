@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #ABD2FA;
-  --secondary-color: #7692FF;
-  --tertiary-color: #1B2CC1;
+  --primary-color: #abd2fa;
+  --secondary-color: #7692ff;
+  --tertiary-color: #1b2cc1;
   --background-color: #091540;
 }
 
@@ -50,6 +50,7 @@ button {
   display: flex;
   height: 100%;
   gap: 2px;
+  flex-wrap: wrap;
 
   margin: 1em;
   justify-content: center;
@@ -109,6 +110,17 @@ button {
 
   text-align: left;
   margin: 0;
+}
+
+.imageContainer {
+  display: flex;
+
+  color: var(--secondary-color);
+  text-decoration: none !important;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer {
