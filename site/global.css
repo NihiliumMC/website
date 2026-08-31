@@ -1,10 +1,8 @@
-/* next up ? https://colorhunt.co/palette/524646a8a492fcf2e5ec5b38 */
-/* https://colorhunt.co/palette/224248325e6a44a1a4ff9a00 */
 :root {
-  --primary-color: #ff9a00;
-  --secondary-color: #44a1a4;
-  --tertiary-color: #325e6a;
-  --background-color: #224248;
+  --primary-color: #ABD2FA;
+  --secondary-color: #7692FF;
+  --tertiary-color: #1B2CC1;
+  --background-color: #091540;
 }
 
 body {
