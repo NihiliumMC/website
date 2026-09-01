@@ -1,7 +1,13 @@
 const galleryImages = [
   {
-    path: "https://nihiliummc.github.io/website/assets/gallery/ryk_cool.png",
+    path: "https://nihiliummc.github.io/website/assets/gallery/mapart_1.png",
     description: "Mapart made by ryk_cool",
+    showOnMainPage: false,
+  },
+  {
+    path: "https://nihiliummc.github.io/website/assets/gallery/mapart_2.webp",
+    description: "",
+    showOnMainPage: false,
   },
   {
     path: "https://nihiliummc.github.io/website/assets/gallery/border_1.webp",
@@ -56,10 +62,6 @@ const galleryImages = [
     description: "Jesus statue found by evxve",
   },
   {
-    path: "https://nihiliummc.github.io/website/assets/gallery/maparts_1.webp",
-    description: "",
-  },
-  {
     path: "https://nihiliummc.github.io/website/assets/gallery/netherite_dodecahedron.webp",
     description:
       "Netherite dodecahedron built on the nether roof by evxve, now a base",
@@ -75,3 +77,11 @@ const galleryImages = [
       "Bedrock sphere built during an illegal event by evxve in the end. There are plans to have planets orbiting around it.",
   },
 ];
+
+function getRandomImage() {
+  const image = galleryImages[random(0, galleryImages.length - 1)];
+
+  if (image.showOnMainPage == undefined || image.showOnMainPage == true)
+    return image;
+  else return getRandomImage();
+}

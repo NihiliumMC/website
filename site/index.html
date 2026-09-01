@@ -56,6 +56,7 @@
       .imageContainer {
         min-width: 15em;
         max-width: 50em;
+        max-height: 80vh;
       }
 
       .image {
@@ -198,29 +199,46 @@
       return Math.floor(Math.random() * (y - x + 1)) + x;
     }
 
-    const imageContainer = document.getElementById("main");
-    const image = galleryImages[random(0, galleryImages.length - 1)];
+    const main = document.getElementById("main");
 
-    console.log(`Selected ${JSON.stringify(image)}`);
-
-    if (imageContainer) {
+    if (main) {
+      let currentImage = getRandomImage();
       const imageLink = document.createElement("a");
 
       imageLink.classList.add("section");
       imageLink.classList.add("imageContainer");
-      imageLink.href = image.path;
+      imageLink.target = "_blank";
+      imageLink.href = currentImage.path;
+      imageLink.id = "galleryLink";
 
       const imageElement = document.createElement("img");
       imageElement.classList.add("image");
-      imageElement.src = image.path;
+      imageElement.src = currentImage.path;
+      imageElement.id = "galleryImage";
+
+      const descriptionContainer = document.createElement("div");
+      descriptionContainer.innerText = currentImage.description;
+      descriptionContainer.id = "galleryDescription";
 
       imageLink.append(imageElement);
-      imageLink.target = "_blank";
-      imageLink.innerHTML += image.description;
+      imageLink.append(descriptionContainer);
+      main.append(imageLink);
 
-      imageContainer.append(imageLink);
+      setInterval(() => {
+        const foundImgElement = document.getElementById("galleryImage");
+        const foundLinkElement = document.getElementById("galleryLink");
+        const foundDescriptionElement =
+          document.getElementById("galleryDescription");
+        const newImage = getRandomImage();
+
+        foundImgElement.src = newImage.path;
+        foundLinkElement.href = newImage.path;
+        foundDescriptionElement.innerText = newImage.description;
+
+        currentImage = newImage;
+      }, 5000);
     } else {
-      console.error("Image container not found");
+      console.error("Main not found");
     }
   </script>
 </html>
