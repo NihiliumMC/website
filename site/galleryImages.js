@@ -62,7 +62,7 @@ const galleryImages = [
     description: "Jesus statue found by evxve",
   },
   {
-    path: "https://nihiliummc.github.io/website/assets/gallery/base_1.webp",
+    path: "https://nihiliummc.github.io/website/assets/gallery/base_1.png",
     description: "A screenshot with Hausemasteer by EZN00B",
   },
   {
