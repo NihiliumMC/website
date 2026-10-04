@@ -62,6 +62,10 @@ const galleryImages = [
     description: "Jesus statue found by evxve",
   },
   {
+    path: "https://nihiliummc.github.io/website/assets/gallery/base_1.webp",
+    description: "A screenshot with Hausemasteer by sonnygame13 on discord",
+  },
+  {
     path: "https://nihiliummc.github.io/website/assets/gallery/netherite_dodecahedron.webp",
     description:
       "Netherite dodecahedron built on the nether roof by evxve, now a base",
