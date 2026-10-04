@@ -27,7 +27,7 @@ const galleryImages = [
   },
   {
     path: "https://nihiliummc.github.io/website/assets/gallery/spawn_1_8_2026.webp",
-    description: "Spawn map as of 1 8 2026 by sonnygame13 on discord",
+    description: "Spawn map as of 1 8 2026 by EZN00B",
   },
   {
     path: "https://nihiliummc.github.io/website/assets/gallery/spawn_1.png",
@@ -63,7 +63,7 @@ const galleryImages = [
   },
   {
     path: "https://nihiliummc.github.io/website/assets/gallery/base_1.webp",
-    description: "A screenshot with Hausemasteer by sonnygame13 on discord",
+    description: "A screenshot with Hausemasteer by EZN00B",
   },
   {
     path: "https://nihiliummc.github.io/website/assets/gallery/netherite_dodecahedron.webp",
