@@ -19,4 +19,14 @@ function addFooter() {
   container.appendChild(privacyLink);
 
   document.body.appendChild(container);
+
+  const analyticsScript = document.createElement("script");
+  analyticsScript.src = "https://cloud.umami.is/script.js";
+  analyticsScript.defer = true;
+  analyticsScript.setAttribute(
+    "data-website-id",
+    "344f009a-0815-417c-bb41-7516640a70b8",
+  );
+
+  document.head.appendChild(analyticsScript);
 }
