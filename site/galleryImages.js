@@ -58,6 +58,10 @@ const galleryImages = [
     description: "Spawn map made by evxve and JaNieKumam",
   },
   {
+    path: "https://nihiliummc.github.io/website/assets/gallery/old_spawn.png",
+    description: "Old spawn render made by respawnwastaken on discord",
+  },
+  {
     path: "https://nihiliummc.github.io/website/assets/gallery/found_jesus.webp",
     description: "Jesus statue found by evxve",
   },
