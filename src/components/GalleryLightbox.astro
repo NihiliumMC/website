@@ -1,0 +1,28 @@
+---
+import Icon from './Icon.astro';
+---
+
+<dialog class="gallery-lightbox" aria-labelledby="gallery-view-title">
+  <div class="lightbox-shell">
+    <div class="lightbox-toolbar">
+      <span class="lightbox-counter" data-gallery-position></span>
+      <div class="lightbox-actions">
+        <a class="lightbox-original" data-gallery-original target="_blank" rel="noopener noreferrer">Original image <Icon name="external" /></a>
+        <button type="button" class="lightbox-close" data-gallery-close aria-label="Close photo viewer" autofocus>×</button>
+      </div>
+    </div>
+    <div class="lightbox-stage" data-gallery-stage>
+      <button type="button" class="lightbox-arrow lightbox-previous" data-gallery-previous aria-label="Previous photo">←</button>
+      <div class="lightbox-image-wrap" aria-busy="false" data-gallery-image-wrap>
+        <img class="lightbox-image" data-gallery-image alt="">
+        <p class="lightbox-loading" data-gallery-loading hidden>Loading photo…</p>
+        <p class="lightbox-error" data-gallery-error hidden>This photo could not load. Try opening the original image.</p>
+      </div>
+      <button type="button" class="lightbox-arrow lightbox-next" data-gallery-next aria-label="Next photo">→</button>
+    </div>
+    <div class="lightbox-caption">
+      <h2 id="gallery-view-title" data-gallery-title></h2>
+      <p data-gallery-caption></p>
+    </div>
+  </div>
+</dialog>

@@ -1,0 +1,52 @@
+---
+import { Image, getImage } from 'astro:assets';
+import type { Photo } from '../lib/gallery';
+import Icon from './Icon.astro';
+
+interface Props {
+  photo: Photo;
+  categoryName: string;
+}
+
+const { photo, categoryName } = Astro.props;
+
+const widths = [400, 800, 1200, 1600].filter((width) => width <= photo.image.width);
+if (widths.length === 0) widths.push(photo.image.width);
+
+const fullSize = await getImage({
+  src: photo.image,
+  width: Math.min(photo.image.width, 2400),
+  format: 'webp',
+  quality: 90,
+});
+---
+
+<article class="gallery-card glass" data-gallery-card data-category={photo.category}>
+  <a
+    class="gallery-photo"
+    href={fullSize.src}
+    data-gallery-open
+    data-title={photo.title}
+    data-caption={photo.caption}
+    aria-label={`View ${photo.title}`}
+  >
+    <span class={`gallery-media ${photo.category === 'mapart' ? 'gallery-media-mapart' : ''}`}>
+      <Image
+        src={photo.image}
+        alt={photo.title}
+        widths={widths}
+        sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw"
+        format="webp"
+        quality={82}
+        loading="lazy"
+        decoding="async"
+      />
+      <span class="gallery-expand" aria-hidden="true"><Icon name="external" /></span>
+    </span>
+    <span class="gallery-caption">
+      <span class="gallery-card-category">{categoryName}</span>
+      <span class="gallery-card-title">{photo.title}</span>
+      {photo.caption && <span class="gallery-card-credit">{photo.caption}</span>}
+    </span>
+  </a>
+</article>

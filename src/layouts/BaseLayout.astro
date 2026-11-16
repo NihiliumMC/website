@@ -1,0 +1,57 @@
+---
+import CopyDialog from '../components/CopyDialog.astro';
+import Footer from '../components/Footer.astro';
+import GalleryLightbox from '../components/GalleryLightbox.astro';
+import Header from '../components/Header.astro';
+import Icons from '../components/Icons.astro';
+import Toast from '../components/Toast.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  page: string;
+  showGallery?: boolean;
+}
+
+const { title, description, page, showGallery = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#0b0f18">
+    <meta name="msvalidate.01" content="15101D090DBCE5AF4AE2DDD0253D3135">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/nihilium-logo.svg" type="image/svg+xml">
+    <link rel="preload" href="/assets/manrope-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/nihilium-display-black-italic.ttf" as="font" type="font/ttf" crossorigin>
+    {page === 'home' && <link rel="preload" href="/assets/spawn.webp" as="image" fetchpriority="high">}
+    <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="344f009a-0815-417c-bb41-7516640a70b8"></script>
+  </head>
+  <body class={page === 'home' ? 'home-page' : 'inner-page'}>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <Icons />
+    <Header page={page} />
+    <slot />
+    <Footer />
+    {showGallery && <GalleryLightbox />}
+    <Toast />
+    <CopyDialog />
+
+    <script>
+      import '../scripts/app.js';
+    </script>
+    {showGallery && (
+      <script>
+        import '../scripts/gallery.js';
+      </script>
+    )}
+  </body>
+</html>

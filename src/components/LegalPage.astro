@@ -1,0 +1,42 @@
+---
+import type { LegalSection } from '../data/legal';
+import Icon from './Icon.astro';
+
+interface Props {
+  title: string;
+  sections: LegalSection[];
+  otherHref: string;
+  otherLabel: string;
+}
+
+const { title, sections, otherHref, otherLabel } = Astro.props;
+---
+
+<main class="inner-main legal-main page-width">
+  <a href="/" class="back-link">← Home</a>
+  <div class="inner-title"><h1>{title}</h1></div>
+
+  <div class="legal-layout">
+    <nav class="legal-toc glass" aria-label="On this page">
+      <span class="section-kicker">ON THIS PAGE</span>
+      {sections.map((section, index) => {
+        const number = String(index + 1).padStart(2, '0');
+        return <a href={`#section-${index + 1}`}>{number} <span>{section.title}</span></a>;
+      })}
+      <a class="legal-other" href={otherHref}>{otherLabel} <Icon name="arrow" /></a>
+    </nav>
+
+    <article class="legal-body glass">
+      {sections.map((section, index) => {
+        const number = String(index + 1).padStart(2, '0');
+        return (
+          <section id={`section-${index + 1}`}>
+            <span class="legal-number">{number}</span>
+            <h2>{section.title}</h2>
+            <Fragment set:html={section.body} />
+          </section>
+        );
+      })}
+    </article>
+  </div>
+</main>
