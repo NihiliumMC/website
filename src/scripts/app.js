@@ -97,7 +97,7 @@ if (statusCard) {
       updated.textContent = `Updated ${observation.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
       updated.title = `Status observed ${observation.toLocaleString()}. Provider may cache for up to 5 minutes.`;
       if (data.online && typeof data.version === 'string' && data.version.trim()) {
-        const version = data.version.replace(/§(?:#[0-9A-Fa-f]{6}|.)/g, '').trim();
+        const version = data.version.replace(/§(?:#[0-9A-Fa-f]{6}|.)/g, '').trim().replace(/^1\.7\.2(?=-|$)/, '1.8');
         $('[data-java-version]').textContent = version;
       }
     } catch (error) {

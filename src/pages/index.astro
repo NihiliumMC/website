@@ -7,7 +7,7 @@ import { categoryName, gallery, homePhotos } from '../lib/gallery';
 
 <BaseLayout
   title="Nihilium Anarchy — A world without limits"
-  description="An open Minecraft anarchy world, shaped by its players. Join Nihilium on Java and Bedrock, check live player status, and make your mark."
+  description="An open Minecraft anarchy world, shaped by its players. Join Nihilium on Java or Eaglercraft, check live player status, and make your mark."
   page="home"
   showGallery
 >
@@ -18,7 +18,7 @@ import { categoryName, gallery, homePhotos } from '../lib/gallery';
       <div class="hero-content page-width">
         <div class="hero-copy">
           <h1 id="hero-title">A world<br>without <span>limits.</span></h1>
-          <p class="hero-description">A Minecraft anarchy server for Java and Bedrock.</p>
+          <p class="hero-description">A Minecraft anarchy server for Java and Eaglercraft.</p>
           <div class="hero-actions">
             <button class="button button-light" data-copy="nihilium.org">Copy server IP <Icon name="copy" /></button>
             <a class="button button-glass" href="https://discord.gg/nihilium" target="_blank" rel="noopener noreferrer"><Icon name="discord" /> Join our Discord <Icon name="external" /></a>
@@ -49,10 +49,15 @@ import { categoryName, gallery, homePhotos } from '../lib/gallery';
           <button class="address-button" data-copy="nihilium.org" aria-label="Copy Java address nihilium.org"><span>nihilium.org</span><Icon name="copy" /></button>
           <span class="edition-help">Multiplayer → Add Server</span>
         </div>
+        <div class="connection-option eaglercraft-option">
+          <div class="edition-label"><Icon name="cube" /> Eaglercraft <span class="edition-tag">BROWSER</span></div>
+          <button class="address-button" data-copy="wss://play.nihilium.org" aria-label="Copy Eaglercraft address wss://play.nihilium.org"><span>wss://play.nihilium.org</span><Icon name="copy" /></button>
+          <span class="edition-help">Add server in your Eaglercraft client</span>
+        </div>
         <div class="connection-option bedrock-option">
-          <div class="edition-label"><Icon name="controller" /> Bedrock Edition <span class="edition-tag">CROSSPLAY</span></div>
-          <button class="address-button" data-copy="bedrock.nihilium.org" aria-label="Copy Bedrock address bedrock.nihilium.org"><span>bedrock.nihilium.org</span><Icon name="copy" /></button>
-          <div class="edition-help">Port <button class="port-copy" data-copy="25406" aria-label="Copy Bedrock port 25406">25406 <Icon name="copy" /></button><span>·</span> Mobile &amp; Windows</div>
+          <div class="edition-label"><Icon name="controller" /> Bedrock Edition <span class="edition-tag">UNAVAILABLE</span></div>
+          <button class="address-button" data-copy="bedrock.nihilium.org" aria-label="Bedrock is temporarily unavailable" disabled><span>bedrock.nihilium.org</span></button>
+          <div class="edition-help is-unavailable-help">Temporarily offline<span>·</span><a href="https://discord.gg/nihilium" target="_blank" rel="noopener noreferrer">Join Discord for updates <Icon name="external" /></a></div>
         </div>
       </div>
     </section>
@@ -73,8 +78,8 @@ import { categoryName, gallery, homePhotos } from '../lib/gallery';
         </article>
         <article class="feature-card glass">
           <div class="feature-icon"><Icon name="people" /></div>
-          <h3>Java &amp; Bedrock</h3>
-          <p>Java and Bedrock players connect to the same world.</p>
+          <h3>Java &amp; Eaglercraft</h3>
+          <p>Play on Java Edition or straight from your browser.</p>
           <a class="card-bottom" href="#join">Connection details <Icon name="arrow" /></a>
         </article>
       </div>
@@ -103,8 +108,12 @@ import { categoryName, gallery, homePhotos } from '../lib/gallery';
           <p>Open Minecraft Java Edition, choose Multiplayer → Add Server, and enter <button class="inline-copy" data-copy="nihilium.org">nihilium.org <Icon name="copy" /></button> as the server address. Save it, select Nihilium, and click Join Server. Follow the in-game instructions to register or sign in.</p>
         </details>
         <details>
+          <summary>Can I play in my browser?<span>+</span></summary>
+          <p>Yes. Open your Eaglercraft client, add <button class="inline-copy" data-copy="wss://play.nihilium.org">wss://play.nihilium.org <Icon name="copy" /></button> as the server address, and join. No Java installation is needed.</p>
+        </details>
+        <details>
           <summary>Can I play on Bedrock Edition?<span>+</span></summary>
-          <p>Yes. On mobile or Windows, open Play → Servers → Add Server. Use <strong>bedrock.nihilium.org</strong> as the address and <strong>25406</strong> as the port. Console editions may require an additional method to connect to a custom server.</p>
+          <p>Bedrock support is temporarily unavailable. Join our <a href="https://discord.gg/nihilium" target="_blank" rel="noopener noreferrer">Discord</a> for updates on when it returns.</p>
         </details>
         <details>
           <summary>What does anarchy mean here?<span>+</span></summary>
