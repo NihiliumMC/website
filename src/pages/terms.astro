@@ -1,0 +1,13 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import { terms } from '../data/legal';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Terms of Service — Nihilium Anarchy"
+  description="Read the Terms of Service for the Nihilium Minecraft and Discord server."
+  page="terms"
+>
+  <LegalPage title="Terms of Service" sections={terms} otherHref="/privacy.html" otherLabel="Privacy Policy" />
+</BaseLayout>

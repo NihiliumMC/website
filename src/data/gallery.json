@@ -1,0 +1,173 @@
+[
+  {
+    "file": "spawn_3.png",
+    "title": "Spawn — view 3",
+    "caption": "",
+    "category": "spawn",
+    "width": 1920,
+    "height": 1020,
+    "home": true
+  },
+  {
+    "file": "bedrock_sphere_2.webp",
+    "title": "Bedrock sphere — exterior",
+    "caption": "Bedrock sphere built during an illegal event by evxve in the end. There are plans to have planets orbiting around it.",
+    "category": "builds",
+    "width": 1912,
+    "height": 980,
+    "home": true
+  },
+  {
+    "file": "jesus_jenga_dragon.webp",
+    "title": "Jesus statue — jenga_dragon",
+    "caption": "A jesus statue built by jenga_dragon on discord",
+    "category": "builds",
+    "width": 1308,
+    "height": 699,
+    "home": true
+  },
+  {
+    "file": "spawn_6.png",
+    "title": "Spawn — view 6",
+    "caption": "",
+    "category": "spawn",
+    "width": 1920,
+    "height": 1200,
+    "home": true
+  },
+  {
+    "file": "old_spawn.png",
+    "title": "Old spawn render",
+    "caption": "Old spawn render made by respawnwastaken on discord",
+    "category": "spawn",
+    "width": 5619,
+    "height": 3379,
+    "home": true
+  },
+  {
+    "file": "netherite_dodecahedron.webp",
+    "title": "Netherite dodecahedron",
+    "caption": "Netherite dodecahedron built on the nether roof by evxve, now a base",
+    "category": "builds",
+    "width": 1411,
+    "height": 898,
+    "home": true
+  },
+  {
+    "file": "spawn_1_8_2026.webp",
+    "title": "Spawn map — EZN00B",
+    "caption": "Spawn map as of 1 8 2026 by EZN00B",
+    "category": "spawn",
+    "width": 899,
+    "height": 893,
+    "home": false
+  },
+  {
+    "file": "spawn_map.webp",
+    "title": "Spawn map",
+    "caption": "Spawn map made by evxve and JaNieKumam",
+    "category": "spawn",
+    "width": 1343,
+    "height": 848,
+    "home": false
+  },
+  {
+    "file": "spawn_1.png",
+    "title": "Spawn — view 1",
+    "caption": "",
+    "category": "spawn",
+    "width": 1920,
+    "height": 1020,
+    "home": false
+  },
+  {
+    "file": "spawn_2.png",
+    "title": "Spawn — view 2",
+    "caption": "",
+    "category": "spawn",
+    "width": 1920,
+    "height": 1020,
+    "home": false
+  },
+  {
+    "file": "spawn_4.png",
+    "title": "Spawn — view 4",
+    "caption": "",
+    "category": "spawn",
+    "width": 1920,
+    "height": 1020,
+    "home": false
+  },
+  {
+    "file": "spawn_5.png",
+    "title": "Spawn — view 5",
+    "caption": "",
+    "category": "spawn",
+    "width": 1920,
+    "height": 1020,
+    "home": false
+  },
+  {
+    "file": "base_1.png",
+    "title": "Hausemasteer — EZN00B",
+    "caption": "A screenshot with Hausemasteer by EZN00B",
+    "category": "builds",
+    "width": 2559,
+    "height": 1364,
+    "home": false
+  },
+  {
+    "file": "found_jesus.webp",
+    "title": "Jesus statue — evxve",
+    "caption": "Jesus statue found by evxve",
+    "category": "builds",
+    "width": 1447,
+    "height": 815,
+    "home": false
+  },
+  {
+    "file": "bedrock_sphere_1.webp",
+    "title": "Bedrock sphere — interior",
+    "caption": "Inside of the bedrock sphere built during an illegal event by evxve in the end",
+    "category": "builds",
+    "width": 1913,
+    "height": 982,
+    "home": false
+  },
+  {
+    "file": "border_1.webp",
+    "title": "World border",
+    "caption": "When 456226577798135808 (Deleted User) on discord reached the world border. Announced Tue Feb 25 2025",
+    "category": "border",
+    "width": 1408,
+    "height": 792,
+    "home": false
+  },
+  {
+    "file": "border_2.webp",
+    "title": "The +X world border",
+    "caption": "When 'fjas' on discord reached the +x world border. Message was sent Mon Apr 28 2025",
+    "category": "border",
+    "width": 1408,
+    "height": 792,
+    "home": false
+  },
+  {
+    "file": "mapart_1.png",
+    "title": "Map art by ryk_cool",
+    "caption": "Mapart made by ryk_cool",
+    "category": "mapart",
+    "width": 128,
+    "height": 128,
+    "home": false
+  },
+  {
+    "file": "mapart_2.webp",
+    "title": "Map art display",
+    "caption": "",
+    "category": "mapart",
+    "width": 898,
+    "height": 315,
+    "home": false
+  }
+]

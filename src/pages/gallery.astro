@@ -1,0 +1,42 @@
+---
+import GalleryCard from '../components/GalleryCard.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { categories, categoryCount, categoryName, gallery } from '../lib/gallery';
+---
+
+<BaseLayout
+  title="Gallery — Nihilium Anarchy"
+  description="Photos from the Nihilium Minecraft server: spawn, player builds, world border visits, and map art."
+  page="gallery"
+  showGallery
+>
+  <main class="inner-main gallery-main page-width">
+    <a href="/" class="back-link">← Home</a>
+    <div class="inner-title gallery-title">
+      <h1>Gallery</h1>
+      <p>Images from the server.</p>
+    </div>
+
+    <div class="gallery-toolbar">
+      <div class="gallery-filters" role="group" aria-label="Filter gallery photos" data-gallery-filters hidden>
+        {categories.map((category) => (
+          <button
+            class="gallery-filter"
+            type="button"
+            data-gallery-filter={category.id}
+            aria-pressed={category.id === 'all' ? 'true' : 'false'}
+          >
+            {category.label} <span>{categoryCount(category.id)}</span>
+          </button>
+        ))}
+      </div>
+      <p class="gallery-result-count" data-gallery-count role="status" aria-live="polite">{gallery.length} photos</p>
+    </div>
+
+    <div class="gallery-grid">
+      {gallery.map((photo) => (
+        <GalleryCard photo={photo} categoryName={categoryName(photo.category)} />
+      ))}
+    </div>
+  </main>
+</BaseLayout>

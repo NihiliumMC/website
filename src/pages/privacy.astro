@@ -1,0 +1,13 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import { privacy } from '../data/legal';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy — Nihilium Anarchy"
+  description="Read how Nihilium collects, uses, and stores player and website data."
+  page="privacy"
+>
+  <LegalPage title="Privacy Policy" sections={privacy} otherHref="/terms.html" otherLabel="Terms of Service" />
+</BaseLayout>
